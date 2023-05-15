@@ -1,7 +1,10 @@
 {
     "watch": [
-        "src"
+        "./src/**/*"
     ],
-    "ext": "*",
+    "ignore": [
+        "./node_modules"
+    ],
+    "ext": "ts,html,scss,vue",
     "exec": "npm run build"
 }

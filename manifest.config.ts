@@ -28,7 +28,6 @@ export default defineManifest(async env => ({
         {
             matches: [ '<all_urls>' ],
             js: [
-                'src/content-scripts/main.ts',
                 'src/lib/monitoring/logger.ts',
                 'src/lib/browser/message.ts',
                 'src/lib/recorder.ts',
@@ -42,10 +41,6 @@ export default defineManifest(async env => ({
         {
             matches: [ '<all_urls>' ],
             resources: [ 'src/assets/*' ]
-        },
-        {
-            'matches': [ '*://*/*' ],
-            'resources': [ 'src/content-scripts/main.ts' ]
         }
     ],
     permissions: [

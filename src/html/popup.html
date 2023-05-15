@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="dark"
+      lang="en">
 <head>
     <meta charset="UTF-8"/>
     <link rel="icon"
@@ -10,17 +11,11 @@
     <title>Vite + Vue + TS</title>
 </head>
 <body>
+
 <div id="app"></div>
 
-Video stream playback:
-<video id="video"
-       style="width: 300px; height: 300px; border: 1px solid red;"></video>
+<script type="module"
+        src="/src/main.ts"></script>
 
-Latest video -> image:
-<canvas id="canvas"
-        style="width: 300px; height: 300px; border: 1px solid blue;"></canvas>
-
-<script src="../lib/popup.ts"
-        type="module"></script>
 </body>
 </html>
