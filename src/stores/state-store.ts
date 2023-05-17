@@ -18,8 +18,11 @@ export const useSocketStore = defineStore('socket', {
         };
     },
     actions: {
-        setStatus(status: Status) {
-            this.status = status;
+        setSocketStatus(status: Status) {
+            this.socket = status;
+        },
+        setRecorderStatus(status: Status) {
+            this.recorder = status;
         }
     }
 });
