@@ -1,9 +1,9 @@
 <script setup
         lang="ts">
 
-import { VideoPlay } from '@element-plus/icons-vue';
-import { ref } from 'vue';
-import { useSocketStore } from './stores/state-store.ts';
+import {VideoPlay} from '@element-plus/icons-vue';
+import {ref} from 'vue';
+import {useSocketStore} from './stores/state-store.ts';
 // import 'element-plus/es/components/button/style/css';
 // import { defineComponent, ref } from 'vue';
 //
@@ -51,6 +51,8 @@ const stateStore = useSocketStore();
 
 <template>
     <div class="w-[500px] flex flex-col gap-4">
+
+        asd f asdf as df as df asdf
         <el-alert title="You haven't confirmed your email address!"
                   type="warning"
                   effect="dark"
@@ -152,6 +154,7 @@ const stateStore = useSocketStore();
             Latest video -> image:
             <canvas id="canvas"
                     style="width: 300px; height: 300px; border: 1px solid blue;"></canvas>
+            <h1 id="countex">test</h1>        
 
         </div>
     </div>

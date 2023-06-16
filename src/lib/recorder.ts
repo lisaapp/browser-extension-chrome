@@ -12,6 +12,7 @@ const log = (...args: any[]) => {
 export class Recorder {
     private stream: MediaStream;
     private socket: Socket;
+    
 
     public async start(stream: MediaStream): Promise<boolean> {
         this.stream = stream;
@@ -19,7 +20,9 @@ export class Recorder {
 
         const video = document.getElementById('video') as HTMLVideoElement;
         const canvas = document.getElementById('canvas') as HTMLCanvasElement;
+        const countex = document.getElementById('countex') as HTMLCanvasElement;
         const context = canvas.getContext('2d');
+        
 
         this.socket = new Socket();
         await this.socket.connect();
@@ -28,8 +31,9 @@ export class Recorder {
             mimeType: 'video/webm;codecs=H264',
             videoBitsPerSecond: 8000000
         });
-
+ 
         recorder.ondataavailable = (e: BlobEvent) => {
+            
             context.drawImage(video, 0, 0, canvas.width, canvas.height);
             const frame = new Frame({
                 blob: e.data,
